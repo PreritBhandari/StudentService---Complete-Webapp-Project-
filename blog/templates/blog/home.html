@@ -1,0 +1,40 @@
+
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+
+{% if user.is_authenticated %}
+<link rel="stylesheet" type="text/css" href="/media/home.css">
+<!--<img src="/media/background.jpg" >-->
+
+<body id="paxadiko">
+
+</body>
+{% else %}
+
+<link rel="stylesheet" type="text/css" href="/media/homeinauth.css">
+
+<body id="paxadikoauth">
+
+</body>
+{% endif %}
+
+
+
+
+
+<!--<img src="/media/background.jpg">-->
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}
+

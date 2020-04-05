@@ -1,0 +1,112 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="/media/rate.css">
+<p>
+
+<div id="jumb" class="jumbotron text-center">
+    <form action="new/" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+
+        <!--        <li class="nav-item dropdown">-->
+        <!--            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"-->
+        <!--               aria-haspopup="true" aria-expanded="false">-->
+        <!--                Give Stars-->
+        <!--            </a>-->
+
+        <!--            {{ form|crispy }}-->
+
+
+        <!--            <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+        <!--                <a class="dropdown-item2" href="#">-->
+
+        <!--                    <img name="yoho" src="/media/review-star.jpg" height="20" width="20">-->
+
+        <!--                </a>-->
+        <!--                <div class="dropdown-divider"></div>-->
+        <!--                <a class="dropdown-item2" href="#">-->
+
+        <!--                    <img src="/media/review-star.jpg" height="20" width="20">-->
+        <!--                    <img src="/media/review-star.jpg" height="20" width="20">-->
+
+        <!--                </a>-->
+        <!--                <div class="dropdown-divider"></div>-->
+        <!--                <a class="dropdown-item2" href="#">-->
+
+        <!--                    <img src="/media/review-star.jpg" height="20" width="20">-->
+        <!--                    <img src="/media/review-star.jpg" height="20" width="20">-->
+        <!--                    <img src="/media/review-star.jpg" height="20" width="20">-->
+
+        <!--                </a>-->
+        <!--                <div class="dropdown-divider"></div>-->
+        <!--                <a class="dropdown-item2" href="#">-->
+
+        <!--                    <img src="/media/review-star.jpg" height="20" width="20">-->
+        <!--                    <img src="/media/review-star.jpg" height="20" width="20">-->
+        <!--                    <img src="/media/review-star.jpg" height="20" width="20">-->
+        <!--                    <img src="/media/review-star.jpg" height="20" width="20">-->
+
+        <!--                </a>-->
+        <!--                <div class="dropdown-divider"></div>-->
+        <!--                <a class="dropdown-item2" href="#">-->
+
+        <!--                    <img src="/media/review-star.jpg" height="20" width="20">-->
+        <!--                    <img src="/media/review-star.jpg" height="20" width="20">-->
+        <!--                    <img src="/media/review-star.jpg" height="20" width="20">-->
+        <!--                    <img src="/media/review-star.jpg" height="20" width="20">-->
+        <!--                    <img src="/media/review-star.jpg" height="20" width="20">-->
+
+        <!--                </a>-->
+
+        <!--            </div>-->
+        <!--        </li>-->
+
+
+        <!--        <br>-->
+
+
+        <!--        <h5 id="ratekoreview">Your Review (Optional):</h5>-->
+        <!--        <br>-->
+        <!--        <textarea rows="3" cols="50">-->
+        <!--Please Submit an honest review.We will help u to make it better.-->
+        <!--</textarea>-->
+        <!--        <br>-->
+        <!--        <br>-->
+        <!--        <div class="form-group">-->
+        <!--            <button class="btn btn-outline-info" type="submit">-->
+        <!--                Submit Review-->
+        <!--            </button>-->
+
+        <!--        </div>-->
+
+        <button type="submit">Write a review</button>
+
+
+    </form>
+</div>
+
+
+{% for post in posts %}
+<article class="media content-section">
+    <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
+    <div class="media-body">
+        <div class="article-metadata">
+            <a class="mr-2" href="/profile">{{ post.author }}</a>
+            <small class="text-muted">{{ post.date }}</small>
+        </div>
+        <h4><a class="article-title">{{ post.title }}</a></h4>
+        <p class="article-content">{{ post.content }}</p>
+    </div>
+
+    <a id="button1" class="btn btn-outline-success" href="{% url 'post-update' post.id %}">Update </a> &ensp;
+    <a id="button2" class="btn btn-outline-danger" href="{% url 'post-delete' post.id %}">Delete</a>
+</article>
+{% endfor %}
+
+
+{% endblock content %}
+
+
+
+
