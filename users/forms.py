@@ -2,6 +2,8 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from .models import Profile
+from blog.models import Book
+from blog.models import Post
 
 
 class UserRegisterForm(UserCreationForm):
@@ -35,3 +37,9 @@ class ProfileUpdateForm(forms.ModelForm):
 
 class RatingForm(forms.ModelForm):
     rating = forms.Textarea()
+
+
+class BookForm(forms.ModelForm):
+    class Meta:
+        model = Book
+        fields = ('title', 'details', 'author', 'file', 'year', 'faculty')

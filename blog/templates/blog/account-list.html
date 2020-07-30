@@ -25,6 +25,7 @@
 							<tbody>
                             {% for fee in fees %}
 								<tr class="row100 body">
+
 									<td class="cell100 column1">{{ fee.fullname }}</td>
 								</tr>
                             {% endfor %}
@@ -43,9 +44,9 @@
 										<th align="center" class="cell100 column5">Paid Annual Fee</th>
 										<th align="center" class="cell100 column6">Remaining Fee</th>
 										<th align="center" class="cell100 column7">Last Date/Time modified(Annual)</th>
-										<th align="center" class="cell100 column8">Total Monthly Fee</th>
-                                        <th align="center" class="cell100 column8">Paid Monthly Fee</th>
-                                        <th align="center" class="cell100 column8">Remaining Monthly Fee</th>
+										<th align="center" class="cell100 column8">This Month Total Fee (Inc.Fine)</th>
+                                        <th align="center" class="cell100 column8">This Month Paid Fee</th>
+                                        <th align="center" class="cell100 column8">This Month Remaining Fee</th>
                                         <th align="center" class="cell100 column8">Last Date/Time modified (Month)</th>
 									</tr>
 								</thead>

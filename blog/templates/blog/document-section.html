@@ -1,0 +1,23 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<head>
+
+    <link rel="stylesheet" type="text/css" href="/media/account.css">
+</head>
+
+<h4 >Upload Your Files Here:</h4>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="document">
+    <button type="submit">Upload</button>
+
+</form>
+{% if url %}
+<p>Uploaded file:<a href="{{ url }}">{{ url }}</a> </p>
+{% endif %}
+
+
+
+
+
+{% endblock content %}

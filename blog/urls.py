@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import PostListView, PostCreateView,PostUpdateView, PostDeleteView
+from .views import PostListView, PostCreateView, PostUpdateView, PostDeleteView
 from . import views
-from .views import FeeListView
+from .views import FeeListView, FullfeeCreateView, FullfeeUpdateView
 
 urlpatterns = [
     path('', views.home, name='blog-home'),
@@ -11,4 +11,6 @@ urlpatterns = [
     path('about/', views.about, name='blog-about'),
     path('rate/', PostListView.as_view(), name='blog-rate'),
     path('account/list', FeeListView.as_view(), name='account-list'),
+    path('account/add-fee/add/', FullfeeCreateView.as_view(), name='add-fee'),
+    path('account/add-fee/add/<int:pk>/update', FullfeeUpdateView.as_view(), name='full-fee-update'),
 ]

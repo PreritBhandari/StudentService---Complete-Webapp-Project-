@@ -1,0 +1,28 @@
+#logoko2{
+
+height:140px;
+width:190px;
+padding-right:10px;
+padding-top:0px;
+padding-bottom:0px;
+}
+
+
+#logoko2:hover{
+	color:black;
+	text-shadow: .5px .5px green;
+
+
+	opacity:1;
+
+display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+transform: scale(1.5);
+
+	}

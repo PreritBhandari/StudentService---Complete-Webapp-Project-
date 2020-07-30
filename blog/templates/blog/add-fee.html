@@ -1,0 +1,28 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+<html>
+
+
+Hey this is add-fee section.
+
+
+<form action="add/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+
+    <button type="submit">Add Fee</button>
+
+</form>
+
+
+
+
+
+
+
+</html>
+
+
+{% endblock content %}

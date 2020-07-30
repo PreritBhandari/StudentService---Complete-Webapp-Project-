@@ -41,3 +41,83 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('blog-rate')
+
+
+class Fullfee(models.Model):
+    faculties = [
+
+        ('BCT', 'Computer'),
+        ('BCE', 'Electrical'),
+        ('BEX', 'Electronics')
+
+    ]
+    type = [
+
+        ('monthly', 'monthly'),
+        ('annual', 'annual')
+
+    ]
+
+    month = [
+
+        ('jan', 'January'),
+        ('feb', 'February'),
+
+        ('march', 'March'),
+        ('april', 'April'),
+
+        ('may', 'May'),
+        ('june', 'June'),
+
+        ('july', 'July'),
+        ('august', 'August'),
+
+        ('sept', 'Sept'),
+        ('oct', 'October'),
+
+        ('nov', 'November'),
+        ('dec', 'December')
+
+    ]
+
+    details = models.ForeignKey(Fee, on_delete=models.CASCADE)
+    fees_type = models.CharField(max_length=10, choices=type)
+    fee_paid_date = models.DateTimeField(default=timezone.now)
+    fee_month = models.CharField(max_length=1000, choices=month, blank=True)
+    amount_fee = models.CharField(max_length=10)
+
+    def __str__(self):
+        return self.fee_month
+
+    def get_absolute_url(self):
+        return reverse('add-fee')
+
+
+class Book(models.Model):
+    faculties = [
+
+        ('BCT', 'Computer'),
+        ('BCE', 'Electrical'),
+        ('BEX', 'Electronics')
+
+    ]
+
+    years = [
+
+        ('1st', 'First'),
+        ('2nd', 'Second'),
+        ('3rd', 'Third'),
+        ('4th', 'Fourth')
+
+    ]
+
+    title = models.CharField(max_length=30)
+    author = models.CharField(max_length=30)
+    date = models.DateTimeField(default=timezone.now)
+    file = models.FileField(upload_to='media/files/')
+    details = models.CharField(max_length=100, default='No Details')
+    faculty = models.CharField(max_length=10, choices=faculties, default='BCT')
+    year = models.CharField(max_length=3, choices=years, default='3rd')
+
+    def __str__(self):
+        return self.title

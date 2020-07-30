@@ -1,7 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a917ce8-617c-4ae1-8884-ef6862a66ede" name="Default Changelist" comment="" />
+    <list default="true" id="3a917ce8-617c-4ae1-8884-ef6862a66ede" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templates/blog/add-fee.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templates/blog/book_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templates/blog/document-section.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templates/blog/fullfee_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templates/blog/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templates/blog/upload_book.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/book_list.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/css/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/css/slicknav.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/icon-fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/icon-fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/icon-fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/icon-fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/img/artist.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/img/college.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/img/enjoy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/img/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/img/hero-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/img/how-to-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/img/icons/back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/img/icons/brain.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/img/icons/check-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/img/icons/next.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/img/icons/p-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/img/icons/p-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/img/icons/p-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/img/icons/pause.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/img/icons/play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/img/icons/pointer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/img/icons/smartphone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/img/player-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/img/sslogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/img/student.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/img/wave-thumb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/js/WaveSurferInit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/js/jplayerInit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/js/jquery-3.2.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/js/jquery.jplayer.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/js/jquery.slicknav.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/js/mixitup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/js/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/js/wavesurfer.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/logo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/media/files/Untitled_1.jpeg.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/media/files/Untitled_1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/media/files/Untitled_1_eGD38JZ.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/media/files/Untitled_1_u3G4mGD.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/media/files/presentation.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/media/files/winbgim.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/media/files/winetricks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/prerit.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/prerit_qZ8UO6V.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/profile_pics/IMG_5597.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/profile_pics/IMG_5601.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/studentservice.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/studentservice2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/sugam.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/winbgim.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/static/blog/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/blog/static/blog/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/account-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/account-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/media/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/rate.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/rate.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,20 +103,31 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_CHANGES_POLICY" value="SHELVE" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
   <component name="ProjectId" id="1S0t8NyqbVYfMtdlq8JiQ94vGXY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/media/profile_pics" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/media/profile_pics" />
-      <recent name="$PROJECT_DIR$/users/templates" />
-      <recent name="$PROJECT_DIR$/blog/templates/blog" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/blog/templates/blog" />
       <recent name="$PROJECT_DIR$/media" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/blog/static/blog" />
+      <recent name="$PROJECT_DIR$/media/profile_pics" />
+      <recent name="$PROJECT_DIR$/users/templates" />
+      <recent name="$PROJECT_DIR$/blog/templates/blog" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -87,5 +186,22 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>

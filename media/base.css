@@ -15,8 +15,7 @@ color:red;
 
 
 body{
-background-image:url("/media/backauth.jpg");
-background-size: 1368px 1080px;
+background: #0a183d;
 }
 
 nav{
@@ -31,6 +30,8 @@ padding-left:30px;
 padding-top:0px;
 padding-bottom:0px;
 }
+
+
 
 #titlekocolor:hover{
 	color:black;
@@ -49,4 +50,9 @@ display: inline-block;
     transition-property: transform;
 transform: scale(1.1);
 
+}
+
+
+#searchko {
+padding-left:100px;
 }
