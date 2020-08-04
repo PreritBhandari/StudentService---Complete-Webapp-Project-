@@ -25,7 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', user_views.register, name='register'),
     path('profile/', user_views.profile, name='profile'),
-    path('account/',blog_views.account,name='account'),
+    path('account/', blog_views.account, name='account'),
     path('document/', blog_views.document, name='document'),
     path('books/', blog_views.book_list, name='book_list'),
     path('books/upload', blog_views.upload_book, name='upload_book'),
@@ -37,3 +37,4 @@ urlpatterns = [
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
