@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a917ce8-617c-4ae1-8884-ef6862a66ede" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/sqlDataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/post_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/rate.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/rate.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +47,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -98,7 +101,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570712180458</updated>
-      <workItem from="1613662865512" duration="1952000" />
+      <workItem from="1613662865512" duration="8514000" />
     </task>
     <servers />
   </component>
@@ -126,6 +129,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="466" y="137" width="424" height="491" key="FileChooserDialogImpl" timestamp="1613667977995">
+      <screen x="0" y="28" width="1366" height="702" />
+    </state>
+    <state x="466" y="137" width="424" height="491" key="FileChooserDialogImpl/0.28.1366.702@0.28.1366.702" timestamp="1613667977995" />
+    <state x="179" y="28" width="997" height="702" key="SettingsEditor" timestamp="1613667943304">
+      <screen x="0" y="28" width="1366" height="702" />
+    </state>
+    <state x="179" y="28" width="997" height="702" key="SettingsEditor/0.28.1366.702@0.28.1366.702" timestamp="1613667943304" />
     <state x="379" y="68" width="607" height="622" key="find.popup" timestamp="1613663686782">
       <screen x="0" y="28" width="1366" height="702" />
     </state>
