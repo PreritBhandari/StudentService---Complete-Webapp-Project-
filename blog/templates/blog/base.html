@@ -35,27 +35,30 @@
             <div class="collapse navbar-collapse" id="navbarToggle">
                 <div class="navbar-nav mr-auto">
                     <a class="nav-item nav-link " href="{% url 'blog-home' %}">Home</a>
-                    <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
+                    <a class="nav-item nav-link" href="{% url 'blog-about' %}">About Us</a>
+                     <a class="nav-item nav-link" href="{% url 'blog-rate' %}">Blog</a>
 
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            More
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Contact Us</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{% url 'blog-rate' %}">Rate Us</a>
-                        </div>
-                    </li>
+<!--                    <li class="nav-item dropdown">-->
+<!--                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"-->
+<!--                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                            More-->
+<!--                        </a>-->
+<!--                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+<!--                            <a class="dropdown-item" href="#">Contact Us</a>-->
+<!--                            <div class="dropdown-divider"></div>-->
+<!--                            <a class="dropdown-item" href="{% url 'blog-rate' %}">Rate Us</a>-->
+<!--                        </div>-->
+<!--                    </li>-->
                     <li>
-                        <div id="searchko">
-                            <input class="search-text" type="text" name="" placeholder="Type to search">
-                            <a href="#" class="hr-btn">
+<!--                        <div id="searchko">-->
+<!--                            <input class="search-text" type="text" name="" placeholder="Type to search">-->
+<!--                            <a href="#" class="hr-btn">-->
 
-                            </a>
-                        </div>
+<!--                            </a>-->
+<!--                        </div>-->
+
+
 
 
                     </li>
@@ -74,7 +77,7 @@
 
                     {% else %}
                     <a class="nav-item nav-link " href="{% url 'login' %}">Login</a>
-                    <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+                    <a class="nav-item nav-link" href="{% url 'register' %}">Create An Account</a>
                     {% endif %}
                 </div>
             </div>
