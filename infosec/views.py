@@ -1,7 +1,7 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
-from django.views.generic import ListView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
 from .forms import InformationForm
 from .models import Information
 
@@ -32,3 +32,6 @@ def information(request):
     }
 
     return render(request, 'infosec/infosec.html', context)
+
+
+

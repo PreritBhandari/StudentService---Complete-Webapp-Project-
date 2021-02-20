@@ -7,4 +7,4 @@ from .models import Information
 class InformationForm(forms.ModelForm):
     class Meta:
         model = Information
-        fields = ['resume']
+        fields = ['resume', 'website', 'github_link', 'facebook_link', 'linkedin_link']
