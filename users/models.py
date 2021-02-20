@@ -11,6 +11,10 @@ class Profile(models.Model):
         return f'{self.user.username} Profile'
 
     def save(self, *args, **kwargs):
+        if self.pk:
+            this_record = Profile.objects.get(pk=self.pk)
+            if this_record.image != self.image:
+                this_record.image.delete(save=False)
         super(Profile, self).save(*args, **kwargs)
 
         img = Image.open(self.image.path)

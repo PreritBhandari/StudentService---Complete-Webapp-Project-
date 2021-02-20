@@ -61,9 +61,10 @@
 
             {% if user.is_authenticated %}
 
-            <a href="{% url 'profile' %}"> <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" width="40px" height="40px">
+            <a href="{% url 'profile' %}"> <img class="rounded-circle account-img" src="{{ user.profile.image.url }}"
+                                                width="40px" height="40px">
             </a>
-             <span>|</span>
+            <span>|</span>
             <a class="logout" href="{% url 'logout' %}">Logout</a>
 
             {% else %}
@@ -90,7 +91,7 @@
         {% if user.is_authenticated %}
         <li><a href="#">Sections </a>
             <ul class="sub-menu">
-                <li><a class="dropdown-item" href="infosec.html">Information Section</a></li>
+                <li><a class="dropdown-item" href="{% url 'infosec' %}">Information Section</a></li>
                 <li><a class="dropdown-item" href="{% url 'account' %}">Account Section</a></li>
                 <li><a class="dropdown-item" href="{% url 'book_list' %}">Document Section</a></li>
             </ul>
