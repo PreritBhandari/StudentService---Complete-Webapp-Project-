@@ -111,13 +111,17 @@ class Book(models.Model):
 
     ]
 
-    title = models.CharField(max_length=30)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    title = models.CharField(max_length=20)
     author = models.CharField(max_length=30)
     date = models.DateTimeField(default=timezone.now)
     file = models.FileField(upload_to='media/files/')
-    details = models.CharField(max_length=100, default='No Details')
+    details = models.CharField(max_length=30, default='No Details')
     faculty = models.CharField(max_length=10, choices=faculties, default='BCT')
     year = models.CharField(max_length=3, choices=years, default='3rd')
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('book_list')

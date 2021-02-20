@@ -5,7 +5,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import Post, Fee, Fullfee, Book
 from django.contrib.auth.decorators import login_required
 from django.core.files.storage import FileSystemStorage
-from users.forms import BookForm
+
+
+# from users.forms import BookForm
 
 
 # posts = [
@@ -42,21 +44,67 @@ def document(request):
     return render(request, 'blog/document-section.html', context)
 
 
-# using function based views
-def book_list(request):
-    books = Book.objects.all()
-    return render(request, 'blog/book_list.html', {'books': books})
+# def book_list(request):
+#     books = Book.objects.get(user=request.user)
+#     return render(request, 'blog/book_list.html', {'books': books})
 
 
-def upload_book(request):
-    if request.method == 'POST':
-        form = BookForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            return redirect('book_list')
-    else:
-        form = BookForm()
-    return render(request, 'blog/upload_book.html', {'form': form})
+class BookList(ListView):
+    model = Book
+    template_name = 'blog/book_list.html'
+    context_object_name = 'books'
+    ordering = ['-date']
+
+
+# def upload_book(request):
+#     if request.method == 'POST':
+#         form = BookForm(request.POST, request.FILES)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('book_list')
+#     else:
+#         form = BookForm()
+#     return render(request, 'blog/upload_book.html', {'form': form})
+
+
+class UploadBook(LoginRequiredMixin, CreateView):
+    model = Book
+    template_name = 'blog/upload_book.html'
+    # context_object_name = 'book'
+    fields = ['title', 'details', 'author', 'file', 'year', 'faculty']
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
+
+class BookUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = Book
+    fields = ['title', 'details', 'author', 'file', 'year', 'faculty']
+    template_name = 'blog/upload_book.html'
+
+    # author set garna lai yo talako
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
+    def test_func(self):
+        book = self.get_object()
+        if self.request.user == book.user:
+            return True
+        return False
+
+
+class BookDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = Book
+    success_url = '/books'
+    template_name = 'blog/book_delete.html'
+
+    def test_func(self):
+        book = self.get_object()
+        if self.request.user == book.user:
+            return True
+        return False
 
 
 # using class based views

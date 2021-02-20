@@ -56,12 +56,14 @@
 
         <!--        </a>-->
 
-        <span>|</span>
+
         <div class="user-panel">
 
             {% if user.is_authenticated %}
 
-            <a href="{% url 'profile' %}">Profile</a>
+            <a href="{% url 'profile' %}"> <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" width="40px" height="40px">
+            </a>
+             <span>|</span>
             <a class="logout" href="{% url 'logout' %}">Logout</a>
 
             {% else %}
@@ -79,11 +81,11 @@
         <li><a href="#">About Us</a></li>
         <li><a href="{% url 'blog-rate' %}">Blog</a></li>
 
-<!--        <ul class="sub-menu">-->
-<!--            <li><a class="dropdown-item" href="{% url 'blog-about' %}">About</a></li>-->
-<!--            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>-->
-<!--            <li><a class="dropdown-item" href="{% url 'blog-rate' %}">Rate Us</a></li>-->
-<!--        </ul>-->
+        <!--        <ul class="sub-menu">-->
+        <!--            <li><a class="dropdown-item" href="{% url 'blog-about' %}">About</a></li>-->
+        <!--            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>-->
+        <!--            <li><a class="dropdown-item" href="{% url 'blog-rate' %}">Rate Us</a></li>-->
+        <!--        </ul>-->
 
         {% if user.is_authenticated %}
         <li><a href="#">Sections </a>

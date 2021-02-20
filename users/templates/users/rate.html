@@ -5,14 +5,15 @@
 <p>
 
 
-
 <div id="jumb" class="">
     <form action="new/" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
 
-    <img class="rounded-circle article-img" src="{{ user.profile.image.url }}"/>
+        <img class="rounded-circle article-img" src="{{ user.profile.image.url }}"/>
 
-        <button style="border: 1px antiquewhite dot-dash ; background-color: transparent; font-weight: bold;font-size: 20px;color: wheat" type="submit">Whats On Your Mind? Write A Post.</button>
+        <button style="border: 1px antiquewhite dot-dash ; background-color: transparent; font-weight: bold;font-size: 20px;color: wheat"
+                type="submit">Whats On Your Mind? Write A Post.
+        </button>
 
 
     </form>
@@ -32,9 +33,11 @@
         <h4><a class="article-title">{{ post.title }}</a></h4>
         <p class="article-content">{{ post.content }}</p>
     </div>
-
+    {% if post.author == user %}
     <a id="button1" class="btn btn-outline-success" href="{% url 'post-update' post.id %}">Update </a> &ensp;
     <a id="button2" class="btn btn-outline-danger" href="{% url 'post-delete' post.id %}">Delete</a>
+
+    {% endif %}
 </article>
 {% endfor %}
 

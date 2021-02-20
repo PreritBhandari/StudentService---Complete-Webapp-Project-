@@ -9,7 +9,7 @@
     <a id="download" href="{% url 'upload_book' %}" class="btn btn-primary">Upload File</a>
 </p>
 
-<table class="table mb-0">
+<table class="table table-hover table-responsive-xl mb-0 ">
     <thead>
     <tr>
         <th>Title</th>
@@ -19,6 +19,10 @@
         <th>Details</th>
         <th>Year</th>
         <th>Faculty</th>
+
+        <th>Uploaded By</th>
+        <th></th>
+        <th></th>
     </tr>
     </thead>
     <tbody>
@@ -28,10 +32,28 @@
         <td>{{ book.author }}</td>
         <td>{{ book.date }}</td>
         <td>
-            <a id="download" href="{{ book.file.url }}" class="btn btn-primary tn-sm" target="_blank">Download File</a> </td>
+            <a id="download" href="{{ book.file.url }}" class="btn btn-outline-warning tn-sm" target="_blank">Download
+                File</a>
+        </td>
         <td>{{ book.details }}</td>
         <td>{{ book.year }}</td>
         <td>{{ book.faculty }}</td>
+        <td>{{ book.user }}</td>
+        {% if book.user != user %}
+        <td></td>
+        <td></td>
+        {% else %}
+        <td><a id="button1" class="btn btn-outline-success" href="{% url 'book-update' book.id %}">
+
+            Update
+
+        </a></td>
+        <td><a id="button2" class="btn btn-outline-danger" href="{% url 'book-delete' book.id %}">Delete</a></td>
+
+
+        {% endif %}
+
+
     </tr>
     {% endfor %}
     </tbody>

@@ -72,8 +72,10 @@
 
                     <!--                    <a id="suru" class="nav-item nav-link" href="{% url 'account' %}">Account Section</a>-->
 
-                    <a class="nav-item nav-link " href="{% url 'profile' %}">Profile</a>
-                    <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+                    <a class="nav-item nav-link " href="{% url 'profile' %}">
+                        <img class="rounded-circle" src="{{ user.profile.image.url }}" width="30px" height="30px"></a>
+
+                    <a class="nav-item nav-link" style="font-size: 20px" href="{% url 'logout' %}">Logout</a>
 
                     {% else %}
                     <a class="nav-item nav-link " href="{% url 'login' %}">Login</a>

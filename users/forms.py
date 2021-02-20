@@ -38,8 +38,8 @@ class ProfileUpdateForm(forms.ModelForm):
 class RatingForm(forms.ModelForm):
     rating = forms.Textarea()
 
-
-class BookForm(forms.ModelForm):
-    class Meta:
-        model = Book
-        fields = ('title', 'details', 'author', 'file', 'year', 'faculty')
+#
+# class BookForm(forms.ModelForm):
+#     class Meta:
+#         model = Book
+#         fields = ('title', 'details', 'author', 'file', 'year', 'faculty')
