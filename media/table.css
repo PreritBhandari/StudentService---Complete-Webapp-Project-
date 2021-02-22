@@ -3,6 +3,7 @@
 
 table, th, td {
   border: 1px solid green;
+
 }
 
 
@@ -92,6 +93,7 @@ table {
 td {
   font-weight: unset;
   padding-right: 10px;
+
 }
 
 th{
@@ -163,6 +165,7 @@ font-weight: unset;
 
 .table100-firstcol table {
   background-color: #fff;
+
 }
 
 .wrap-table100-nextcols {
@@ -201,8 +204,10 @@ font-weight: unset;
 
 .table100.ver1 td {
   font-family: Roboto-Medium;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.4;
+
+
 }
 
 .table100.ver1 .table100-firstcol td {

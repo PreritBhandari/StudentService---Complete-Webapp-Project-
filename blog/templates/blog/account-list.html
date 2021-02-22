@@ -1,4 +1,3 @@
-
 {% extends "blog/base.html" %}
 {% block content %}
 
@@ -6,88 +5,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="stylesheet" type="text/css" href="/media/table.css">
-<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/media/table.css">
+    <!--===============================================================================================-->
 </head>
 <body>
 
-	<div class="limiter">
-		<div class="container-table100">
-			<div class="wrap-table100">
-				<div class="table100 ver1">
-					<div class="table100-firstcol">
-						<table>
-							<thead>
-								<tr class="row100 head">
-									<th class="cell100 column1">Students</th>
-								</tr>
-							</thead>
-							<tbody>
+<div class="limiter">
+    <div class="container-table100">
+        <div class="wrap-table100">
+            <div class="table100 ver1">
+                <div class="table100-firstcol">
+                    <table>
+                        <thead>
+                        <tr class="row100 head">
+                            <th style="color:black; font-weight: bold" class="cell100 column1">Students</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        {% for fee in fees %}
+                        <tr class="row100 body">
+
+                            <td style="color:black;" class="cell100 column1">{{ fee.name }}</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="wrap-table100-nextcols js-pscroll">
+                    <div class="table100-nextcols">
+                        <table>
+                            <thead>
+                            <tr class="row100 head">
+                                <th style="color:black; font-weight: bold" class="cell100 column2">Faculty</th>
+                                <th style="color:black; font-weight: bold" align="center" class="cell100 column3">Roll No</th>
+
+                                <th style="color:black; font-weight: bold" align="center" class="cell100 column4">Year</th>
+                                <th style="color:black; font-weight: bold" align="center" class="cell100 column5">Fees Type</th>
+                                <th style="color:black; font-weight: bold" align="center" class="cell100 column6">Fee Month</th>
+                                <th style="color:black; font-weight: bold" align="center" class="cell100 column7">Fee Paid Date</th>
+                                <th style="color:black; font-weight: bold" align="center" class="cell100 column8">Amount</th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
                             {% for fee in fees %}
-								<tr class="row100 body">
+                            <tr class="row100 body">
 
-									<td class="cell100 column1">{{ fee.fullname }}</td>
-								</tr>
+                                <td style="color:black;" class="cell100 column2">{{ fee.faculty }}</td>
+                                <td style="color:black;" class="cell100 column3" align="center">{{ fee.roll_no }}</td>
+                                <td style="color:black;" class="cell100 column4" align="center">{{ fee.year }}</td>
+                                <td style="color:black;" class="cell100 column5" align="center">{{ fee.fees_type }}</td>
+                                <td style="color:black;" class="cell100 column6" align="center">{{ fee.fee_month }}</td>
+                                <td style="color:black;" class="cell100 column7" align="center">{{ fee.fee_paid_date}}
+                                </td>
+                                <td style="color:red;" class="cell100 column8" align="center">{{ fee.amount }}</td>
+
+
+                            </tr>
                             {% endfor %}
-							</tbody>
-						</table>
-					</div>
 
-					<div class="wrap-table100-nextcols js-pscroll">
-						<div class="table100-nextcols">
-							<table>
-								<thead>
-									<tr class="row100 head">
-										<th class="cell100 column2">Faculty</th>
-										<th align="center" class="cell100 column3">Roll no</th>
-										<th align="center" class="cell100 column4">Total Annual Fee</th>
-										<th align="center" class="cell100 column5">Paid Annual Fee</th>
-										<th align="center" class="cell100 column6">Remaining Fee</th>
-										<th align="center" class="cell100 column7">Last Date/Time modified(Annual)</th>
-										<th align="center" class="cell100 column8">This Month Total Fee (Inc.Fine)</th>
-                                        <th align="center" class="cell100 column8">This Month Paid Fee</th>
-                                        <th align="center" class="cell100 column8">This Month Remaining Fee</th>
-                                        <th align="center" class="cell100 column8">Last Date/Time modified (Month)</th>
-									</tr>
-								</thead>
-								<tbody>
-                                    {% for fee in fees %}
-									<tr class="row100 body">
-
-										<td class="cell100 column2">{{ fee.faculty }}</td>
-										<td class="cell100 column3" align="center">{{ fee.roll_no }}</td>
-										<td class="cell100 column4" align="center">{{ fee.total_annual_fee }}</td>
-										<td class="cell100 column5" align="center">{{ fee.paid_annual_fee }}</td>
-										<td class="cell100 column6" align="center">{{ fee.remaining_annual_fee }}</td>
-										<td class="cell100 column7" align="center">{{ fee.last_annual_date_modified }}</td>
-										<td class="cell100 column8" align="center">{{ fee.total_monthly_fee }}</td>
-									    <td class="cell100 column7" align="center">{{ fee.paid_monthly_fee }}</td>
-										<td class="cell100 column7" align="center">{{ fee.remaining_monthly_fee }}</td>
-										<td class="cell100 column7" align="center">{{ fee.last_monthly_date_modified }}</td>
-
-                                    </tr>
-                                    {% endfor %}
-
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 </body>
+
 </html>
-
-
-
-
-
 
 
 {% endblock content %}

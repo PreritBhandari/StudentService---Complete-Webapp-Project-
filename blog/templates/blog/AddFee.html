@@ -1,0 +1,67 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div style="color: white;">
+
+
+    {% if user.is_superuser %}
+
+
+    <style>
+        label {
+            font-size: 15px;
+            font-weight: bold;
+        }
+    </style>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div style="margin-left: 280px;text-align: center;background-color: teal;width: 600px;border-radius: 40px">
+
+
+            <label style="margin-top: 20px">Name </label><br/>
+            {{ form.name}}
+            <br/><br/>
+
+
+            <label>Faculty</label><br/>
+            {{ form.faculty }}<br/><br/>
+
+            <label>Year</label><br/>
+            {{ form.year }}<br/><br/>
+
+
+            <label>Roll No</label><br/>
+            {{ form.roll_no }}<br/><br/>
+
+            <label>Fees Type</label><br/>
+            {{ form.fees_type }}<br/><br/>
+
+            <label>Fees Month</label><br/>
+            {{ form.fee_month}}<br/><br/>
+
+
+            <label>Amount</label><br/>
+            {{ form.amount}}<br/><br/>
+
+
+            <button style=" margin-bottom:20px; " type="submit" class="btn btn-primary">Add Fee</button>
+        </div>
+    </form>
+
+
+    {% else %}
+    Request Your College Administration For Fee Addition.If you are the College Staff, you can add the Fee with our
+    Staff Login Page.Login with the Staff if you are Staff.
+
+    <br/><br/>
+
+    Thanks For Visiting !!
+
+    {% endif %}
+</div>
+
+
+{% endblock content %}

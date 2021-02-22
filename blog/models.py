@@ -123,6 +123,94 @@ class Book(models.Model):
     def __str__(self):
         return self.title
 
-
     def get_absolute_url(self):
         return reverse('book_list')
+
+
+class AddFee(models.Model):
+    faculties = [
+
+        ('BCT', 'Computer'),
+        ('BEL', 'Electrical'),
+        ('BEX', 'Electronics'),
+        ('BCE', 'Civil')
+
+    ]
+
+    years = [
+
+        ('1st', 'First'),
+        ('2nd', 'Second'),
+        ('3rd', 'Third'),
+        ('4th', 'Fourth')
+
+    ]
+
+    month = [
+
+        ('jan', 'January'),
+        ('feb', 'February'),
+
+        ('march', 'March'),
+        ('april', 'April'),
+
+        ('may', 'May'),
+        ('june', 'June'),
+
+        ('july', 'July'),
+        ('august', 'August'),
+
+        ('sept', 'Sept'),
+        ('oct', 'October'),
+
+        ('nov', 'November'),
+        ('dec', 'December')
+
+    ]
+
+    type = [
+
+        ('monthly', 'monthly'),
+        ('annual', 'annual')
+
+    ]
+
+    month = [
+
+        ('jan', 'January'),
+        ('feb', 'February'),
+
+        ('march', 'March'),
+        ('april', 'April'),
+
+        ('may', 'May'),
+        ('june', 'June'),
+
+        ('july', 'July'),
+        ('august', 'August'),
+
+        ('sept', 'Sept'),
+        ('oct', 'October'),
+
+        ('nov', 'November'),
+        ('dec', 'December')
+
+    ]
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=200)
+    faculty = models.CharField(max_length=10, choices=faculties, default='BCT')
+    year = models.CharField(max_length=10, choices=years
+                            , default='1st')
+    roll_no = models.CharField(max_length=9, default='BCT074047')
+
+    fees_type = models.CharField(max_length=10, choices=type)
+    fee_month = models.CharField(max_length=1000, choices=month, blank=True)
+    fee_paid_date = models.DateTimeField(default=timezone.now)
+    amount = models.IntegerField(default=5000)
+
+    def __str__(self):
+        return f' {self.name} {self.fees_type} fees'
+
+    def get_absolute_url(self):
+        return reverse('account-list')

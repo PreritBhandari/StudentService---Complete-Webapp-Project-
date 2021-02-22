@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from .models import Post, Fee, Fullfee, Book
+
+from .models import Post, Fee, Fullfee, Book, AddFee
 from django.contrib.auth.decorators import login_required
 from django.core.files.storage import FileSystemStorage
 
@@ -171,18 +172,18 @@ def account(request):
     return render(request, 'blog/account.html')
 
 
-class FeeListView(ListView):
-    model = Fee
-    template_name = 'blog/account-list.html'
-    context_object_name = 'fees'
-    ordering = ['fullname']
+# class FeeListView(ListView):
+#     model = Fee
+#     template_name = 'blog/account-list.html'
+#     context_object_name = 'fees'
+#     ordering = ['fullname']
 
-
-class FullfeeListView(ListView):
-    model = Fullfee
-    template_name = 'blog/add-fee.html'
-    context_object_name = 'fullfees'
-    ordering = ['fullname']
+#
+# class FullfeeListView(ListView):
+#     model = Fullfee
+#     template_name = 'blog/add-fee.html'
+#     context_object_name = 'fullfees'
+#     ordering = ['fullname']
 
 
 class FullfeeCreateView(LoginRequiredMixin, CreateView):
@@ -209,3 +210,21 @@ class FullfeeUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         if self.request.user == fullfee.details.fullname:
             return True
         return False
+
+
+class AddFeeCreateView(LoginRequiredMixin, CreateView):
+    model = AddFee
+    fields = ['name', 'roll_no', 'faculty', 'year', 'fees_type', 'fee_month', 'amount']
+    template_name = 'blog/AddFee.html'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
+
+class AddFeeListView(LoginRequiredMixin, ListView):
+    model = AddFee
+    template_name = 'blog/account-list.html'
+    context_object_name = 'fees'
+    queryset = AddFee.objects.all()
+    ordering = ['-fee_paid_date']
