@@ -2,32 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a917ce8-617c-4ae1-8884-ef6862a66ede" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/blog/templates/blog/yourtrans.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/infosec/corona_YHn4HHk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/infosec/final.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/infosec/index.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/media/files/college_hVcBxcI.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/media/files/final_DEOF0W0.psd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/media/files/index.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/Anmol-KC_4BYyGl8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/RajeshHamal.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/prerit.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/migrations/0002_profile_roll_no.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/migrations/0003_remove_profile_roll_no.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/account-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/account-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/book_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/book_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/templates/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post_confirm_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/post_confirm_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/infosec/Prerits_Resume.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/logout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +104,7 @@
       <workItem from="1613674037927" duration="625000" />
       <workItem from="1613726124922" duration="3141000" />
       <workItem from="1613812166637" duration="21138000" />
-      <workItem from="1613980207380" duration="29876000" />
+      <workItem from="1613980207380" duration="30261000" />
     </task>
     <servers />
   </component>
