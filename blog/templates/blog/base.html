@@ -36,7 +36,7 @@
                 <div class="navbar-nav mr-auto">
                     <a class="nav-item nav-link " href="{% url 'blog-home' %}">Home</a>
                     <a class="nav-item nav-link" href="{% url 'blog-about' %}">About Us</a>
-                     <a class="nav-item nav-link" href="{% url 'blog-rate' %}">Blog</a>
+                     <a class="nav-item nav-link" href="{% url 'blog-post' %}">Blog</a>
 
 
 <!--                    <li class="nav-item dropdown">-->
@@ -47,7 +47,7 @@
 <!--                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
 <!--                            <a class="dropdown-item" href="#">Contact Us</a>-->
 <!--                            <div class="dropdown-divider"></div>-->
-<!--                            <a class="dropdown-item" href="{% url 'blog-rate' %}">Rate Us</a>-->
+<!--                            <a class="dropdown-item" href="{% url 'blog-post' %}">Rate Us</a>-->
 <!--                        </div>-->
 <!--                    </li>-->
                     <li>
@@ -90,16 +90,16 @@
 <body>
 
 
-{% if user.is_authenticated %}
-<div class="container">
-    <p>
-    <p>
+<!--{% if user.is_authenticated %}-->
+<!--<div class="container">-->
+<!--    <p>-->
+<!--    <p>-->
 
-    <h1><font color="red">You are authenticated user.</font></h1>
+<!--    <h1><font color="red">You are authenticated user.</font></h1>-->
 
 
-</div>
-{% endif %}
+<!--</div>-->
+<!--{% endif %}-->
 
 
 <main role="main" class="container">

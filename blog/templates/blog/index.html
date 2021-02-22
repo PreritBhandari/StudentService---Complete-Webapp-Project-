@@ -80,12 +80,12 @@
     <ul class="main-menu">
         <li><a href="{% url 'blog-home' %}">Home</a></li>
         <li><a href="#">About Us</a></li>
-        <li><a href="{% url 'blog-rate' %}">Blog</a></li>
+        <li><a href="{% url 'blog-post' %}">Blog</a></li>
 
         <!--        <ul class="sub-menu">-->
         <!--            <li><a class="dropdown-item" href="{% url 'blog-about' %}">About</a></li>-->
         <!--            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>-->
-        <!--            <li><a class="dropdown-item" href="{% url 'blog-rate' %}">Rate Us</a></li>-->
+        <!--            <li><a class="dropdown-item" href="{% url 'blog-post' %}">Rate Us</a></li>-->
         <!--        </ul>-->
 
         {% if user.is_authenticated %}
@@ -114,7 +114,7 @@
                         <div class="hs-text">
                             <h2><span>WELCOME </span> <br>TO <br> <strong>STUDENT SERVICE</strong></h2>
                             <p></p>
-                            <a href="blog.html" class="site-btn">Blogs</a>
+                            <a href="{% url 'blog-post' %}" class="site-btn">Blogs</a>
                             <!--<a href="#" class="site-btn sb-c2">Start free trial</a>-->
                         </div>
                     </div>
@@ -150,11 +150,11 @@
     </div>
 </section>
 
-{% if user.is_authenticated %}
+<!--{% if user.is_authenticated %}-->
 
-Hey this is the profile of you.
-Welcome Man :D
-{% endif %}
+<!--Hey this is the profile of you.-->
+<!--Welcome Man :D-->
+<!--{% endif %}-->
 <!-- Hero section end -->
 
 <!-- Intro section -->

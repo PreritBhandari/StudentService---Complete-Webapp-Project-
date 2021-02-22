@@ -247,3 +247,16 @@ class AddFeeUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         if self.request.user == fee.user:
             return True
         return False
+
+
+# Normal User View Fee Transactions
+
+class ViewFeeTrans(LoginRequiredMixin, ListView):
+    model = AddFee
+    template_name = 'blog/yourtrans.html'
+    context_object_name = 'fees'
+    ordering = ['-fee_paid_date']
+
+    def get_queryset(self):
+        print(self.request.user.get_full_name())
+        return AddFee.objects.filter(name=self.request.user.get_full_name())

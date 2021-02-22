@@ -11,7 +11,8 @@
 {% if user.is_superuser %}
 
 <div class="limiter">
-    <button class="btn btn-outline-warning"><a style="text-decoration: none;color: red;" href="{% url 'AddFee' %}">Add Fee</a>
+    <button class="btn btn-outline-warning"><a style="text-decoration: none;color: red;" href="{% url 'AddFee' %}">Add
+        Fee</a>
     </button>
     <br/><br/>
     <div class="container-table100">
@@ -108,12 +109,24 @@
 
 {% else %}
 
-<div style="color: white">This is the Page for Staffs.If you are the College Staff, you can see the Fee Transactions
+<div style="color: white; margin-left: 380px;text-align: center;font-size: 20px;">
+    <a
+            class=" btn btn-outline-success"
+            href="{% url 'fee-trans' %}" style="text-decoration: none">
+
+        See Your Transactions
+
+    </a>
+    <br/>
+    <br/>
+    If you are the College Staff, you can see the Fee Transactions
     with our
     Staff Login Page. Login with the Staff if you are Staff.
     <br/><br/>
 
     Thanks For Visiting !!
+
+
 </div>
 
 {% endif %}
