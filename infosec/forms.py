@@ -1,6 +1,7 @@
 from django import forms
 
 # Creating ModelForm for Information Section
+
 from .models import Information
 
 

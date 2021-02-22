@@ -212,6 +212,8 @@ class FullfeeUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return False
 
 
+# Add Fee Section For Staffs
+
 class AddFeeCreateView(LoginRequiredMixin, CreateView):
     model = AddFee
     fields = ['name', 'roll_no', 'faculty', 'year', 'fees_type', 'fee_month', 'amount']
@@ -228,3 +230,20 @@ class AddFeeListView(LoginRequiredMixin, ListView):
     context_object_name = 'fees'
     queryset = AddFee.objects.all()
     ordering = ['-fee_paid_date']
+
+
+class AddFeeUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = AddFee
+    fields = ['name', 'roll_no', 'faculty', 'year', 'fees_type', 'fee_month', 'amount']
+    template_name = 'blog/AddFee.html'
+
+    # author set garna lai yo talako
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
+    def test_func(self):
+        fee = self.get_object()
+        if self.request.user == fee.user:
+            return True
+        return False

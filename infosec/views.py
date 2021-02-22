@@ -7,8 +7,6 @@ from .models import Information
 
 
 # Used ModelForm InformationForm
-# Used Generic Class Based Views
-
 
 @login_required
 def information(request):
@@ -22,6 +20,7 @@ def information(request):
             form.save()
             messages.success(request, f'Information updated.')
             return redirect('infosec')
+
     else:
 
         form = InformationForm(instance=request.user.information)
@@ -34,4 +33,11 @@ def information(request):
     return render(request, 'infosec/infosec.html', context)
 
 
+class CreateInfoSec(CreateView):
+    model = Information
+    template_name = 'infosec/infosec.html'
+    fields = ['resume', 'website', 'github_link', 'facebook_link', 'linkedin_link']
 
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)

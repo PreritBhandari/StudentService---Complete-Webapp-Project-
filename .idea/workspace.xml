@@ -2,23 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a917ce8-617c-4ae1-8884-ef6862a66ede" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/blog/templates/blog/AddFee.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/infosec/Prerits_Resume.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infosec/migrations/0005_auto_20210222_1830.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infosec/migrations/0006_auto_20210222_1837.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infosec/migrations/0007_auto_20210222_1859.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infosec/migrations/0008_auto_20210222_1900.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infosec/migrations/0009_auto_20210222_1903.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/blogphotos/default.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/infosec/college.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/infosec/default.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/infosec/final.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/infosec/final_Q4KEIYx.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/profile_pics/Anmol-KC.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0002_auto_20210220_0943.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0003_auto_20210220_1107.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0004_auto_20210220_1109.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0005_auto_20210220_1153.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/static/blog/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/blog/static/blog/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/templates/blog/account-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/account-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/infosec/college.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/media/table.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infosec/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/infosec/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infosec/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/infosec/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infosec/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/infosec/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infosec/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/infosec/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/default.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/default.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +59,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="/IW/Final Project/iw-acad--Hospital-Hand--be/HospitalHand" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/media/infosec" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -62,15 +70,16 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/blog/static/blog" />
-      <recent name="$PROJECT_DIR$/media/profile_pics" />
-      <recent name="$PROJECT_DIR$/users/templates" />
-      <recent name="$PROJECT_DIR$/blog/templates/blog" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/blog/templates/blog" />
       <recent name="$PROJECT_DIR$/media" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/media/infosec" />
+      <recent name="$PROJECT_DIR$/media/blogphotos" />
+      <recent name="$PROJECT_DIR$/blog/static/blog" />
+      <recent name="$PROJECT_DIR$/media/profile_pics" />
+      <recent name="$PROJECT_DIR$/users/templates" />
     </key>
   </component>
   <component name="RunManager">
@@ -117,7 +126,7 @@
       <workItem from="1613674037927" duration="625000" />
       <workItem from="1613726124922" duration="3141000" />
       <workItem from="1613812166637" duration="21138000" />
-      <workItem from="1613980207380" duration="13883000" />
+      <workItem from="1613980207380" duration="23547000" />
     </task>
     <servers />
   </component>
@@ -145,10 +154,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="416" y="127" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613993386138">
+    <state x="416" y="127" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614000296516">
       <screen x="0" y="28" width="1366" height="702" />
     </state>
-    <state x="416" y="127" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.28.1366.702@0.28.1366.702" timestamp="1613993386138" />
+    <state x="416" y="127" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.28.1366.702@0.28.1366.702" timestamp="1614000296516" />
     <state x="466" y="137" width="424" height="491" key="FileChooserDialogImpl" timestamp="1613667977995">
       <screen x="0" y="28" width="1366" height="702" />
     </state>
@@ -161,9 +170,9 @@
       <screen x="0" y="28" width="1366" height="702" />
     </state>
     <state x="379" y="68" width="607" height="622" key="find.popup/0.28.1366.702@0.28.1366.702" timestamp="1613981555710" />
-    <state x="346" y="51" key="search.everywhere.popup" timestamp="1613983416686">
+    <state x="346" y="51" width="672" height="678" key="search.everywhere.popup" timestamp="1613999200642">
       <screen x="0" y="28" width="1366" height="702" />
     </state>
-    <state x="346" y="51" key="search.everywhere.popup/0.28.1366.702@0.28.1366.702" timestamp="1613983416686" />
+    <state x="346" y="51" width="672" height="678" key="search.everywhere.popup/0.28.1366.702@0.28.1366.702" timestamp="1613999200642" />
   </component>
 </project>

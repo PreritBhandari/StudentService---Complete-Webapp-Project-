@@ -9,22 +9,21 @@
 {% if user.is_staff %}
 
 <h4>
-Hello this is account page. Welcome Staff.You are the staff of our college.
-No other normal users will be able to view this page.
+    Hello this is account page. Welcome Staff.You are the staff of our college.
+    No other normal users will be able to view this page.
 </h4>
 
 <h3><a href="{% url 'account-list' %}">List Final Fee Report</a></h3>
-<h3><a href="{% url 'add-fee' %}">Add Fee</a></h3>
+<h3><a href="{% url 'AddFee' %}">Add Fee</a></h3>
 
 
 {% else %}
 
 <h4>
-Welcome normal users.You cannot view what our staffs can view.
-Thank you!!!
+    Welcome normal users.You cannot view what our staffs can view.
+    Thank you!!!
 </h4>
 {% endif %}
-
 
 
 {% endblock content %}
