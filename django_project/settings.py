@@ -132,3 +132,5 @@ LOGIN_URL = 'login'
 # to use django heroku
 
 django_heroku.settings(locals())
+
+AUTH_USER_MODEL = 'users.CustomUser'

@@ -1,8 +1,10 @@
 from django.db import models
 from django.db.models import IntegerField
 from django.utils import timezone
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from django.urls import reverse
+
+from users.models import CustomUser
 
 
 class Fee(models.Model):
@@ -34,7 +36,7 @@ class Post(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
     date = models.DateTimeField(default=timezone.now)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
@@ -111,7 +113,7 @@ class Book(models.Model):
 
     ]
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     title = models.CharField(max_length=20)
     author = models.CharField(max_length=30)
     date = models.DateTimeField(default=timezone.now)
@@ -197,7 +199,7 @@ class AddFee(models.Model):
 
     ]
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
     faculty = models.CharField(max_length=10, choices=faculties, default='BCT')
     year = models.CharField(max_length=10, choices=years

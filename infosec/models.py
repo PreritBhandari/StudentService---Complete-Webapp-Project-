@@ -1,18 +1,23 @@
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
 
-
 # Create your models here.
+from users.models import CustomUser
 
 
 class Information(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
     resume = models.FileField(upload_to='infosec', default='infosec/Prerits_Resume.pdf', blank=True)
-    website = models.CharField(max_length=200, default='www.studentservice.com', blank=True)
+    # website = models.CharField(max_length=200, default='www.studentservice.com', blank=True)
     github_link = models.CharField(max_length=200, default='github.com', blank=True)
     facebook_link = models.CharField(max_length=200, default='facebook.com', blank=True)
-    linkedin_link = models.CharField(max_length=200, default='linkedin.com', blank=True)
+    # linkedin_link = models.CharField(max_length=200, default='linkedin.com', blank=True)
+    phone_no = models.IntegerField(default=9842611149)
+    father_name = models.CharField(max_length=250, default='Prem Sagar Bhandari')
+    mother_name = models.CharField(max_length=250, default='Bimala Bhandari')
+    guardian_no = models.IntegerField(default=9845047706)
+    address = models.CharField(max_length=250, default='Bharatpur')
 
     def __str__(self):
         return f'{self.user.username} Information'

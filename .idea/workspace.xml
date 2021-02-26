@@ -2,9 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a917ce8-617c-4ae1-8884-ef6862a66ede" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/infosec/templates/infosec/infoadd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infosec/templates/infosec/infosec-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/media/files/ankit_bro_WhpgehV.JPG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infosec/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/infosec/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infosec/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/infosec/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infosec/migrations/0002_auto_20210220_1414.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/infosec/migrations/0003_auto_20210220_1424.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/infosec/migrations/0004_auto_20210220_1430.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/infosec/migrations/0005_auto_20210222_1830.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/infosec/migrations/0006_auto_20210222_1837.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/infosec/migrations/0007_auto_20210222_1859.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/infosec/migrations/0008_auto_20210222_1900.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/infosec/migrations/0009_auto_20210222_1903.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/infosec/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/infosec/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infosec/templates/infosec/infosec.html" beforeDir="false" afterPath="$PROJECT_DIR$/infosec/templates/infosec/infosec.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infosec/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/infosec/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infosec/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/infosec/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0002_profile_roll_no.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0003_remove_profile_roll_no.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +130,10 @@
       <workItem from="1613674037927" duration="625000" />
       <workItem from="1613726124922" duration="3141000" />
       <workItem from="1613812166637" duration="21138000" />
-      <workItem from="1613980207380" duration="30261000" />
+      <workItem from="1613980207380" duration="30889000" />
+      <workItem from="1614059657714" duration="748000" />
+      <workItem from="1614145171888" duration="1409000" />
+      <workItem from="1614329137459" duration="8731000" />
     </task>
     <servers />
   </component>
@@ -132,10 +161,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="416" y="127" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614011565486">
+    <state x="416" y="127" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614361574984">
       <screen x="0" y="28" width="1366" height="702" />
     </state>
-    <state x="416" y="127" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.28.1366.702@0.28.1366.702" timestamp="1614011565486" />
+    <state x="416" y="127" width="524" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.28.1366.702@0.28.1366.702" timestamp="1614361574984" />
     <state x="466" y="137" width="424" height="491" key="FileChooserDialogImpl" timestamp="1613667977995">
       <screen x="0" y="28" width="1366" height="702" />
     </state>

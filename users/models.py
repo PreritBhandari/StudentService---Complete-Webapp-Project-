@@ -1,21 +1,29 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
 from PIL import Image
 
 
+class CustomUser(AbstractUser):
+    """
+    Custom User Model to add additional attributes to User Model
+    """
+
+    roll_no = models.CharField(max_length=9, null=False, default='BCT074047')
+
+
 class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
 
     def __str__(self):
         return f'{self.user.username} Profile'
 
-    # def save(self, *args, **kwargs):
-    #     if self.pk:
-    #         this_record = Profile.objects.get(pk=self.pk)
-    #         if this_record.image != self.image:
-    #             this_record.image.delete(save=False)
-    #     super(Profile, self).save(*args, **kwargs)
+        # def save(self, *args, **kwargs):
+        #     if self.pk:
+        #         this_record = Profile.objects.get(pk=self.pk)
+        #         if this_record.image != self.image:
+        #             this_record.image.delete(save=False)
+        #     super(Profile, self).save(*args, **kwargs)
 
         img = Image.open(self.image.path)
 

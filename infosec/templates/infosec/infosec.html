@@ -1,7 +1,28 @@
 {% extends "blog/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
+<head>
+    <link rel="stylesheet" type="text/css" href="/media/table.css">
+    <!--===============================================================================================-->
+</head>
+{% if user.is_superuser %}
 
+<div style="margin-left: 400px;margin-top: 150px;">
+    <button class="btn btn-outline-warning"><a style="text-decoration: none;color: red;"
+                                               href="{% url 'infosec-list' %}">List
+        Information</a>
+    </button>
+
+    &nbsp;&nbsp;
+
+
+    <button class="btn btn-outline-warning"><a style="text-decoration: none;color: red;"
+                                               href="{% url 'infosec-create' %}">Add
+        Information</a>
+    </button>
+</div>
+
+{% else %}
 
 <div class="content-section">
     <div class="media">
@@ -33,5 +54,5 @@
         </div>
     </form>
 </div>
-
+{% endif %}
 {% endblock content %}

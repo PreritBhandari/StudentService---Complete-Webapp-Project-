@@ -258,5 +258,5 @@ class ViewFeeTrans(LoginRequiredMixin, ListView):
     ordering = ['-fee_paid_date']
 
     def get_queryset(self):
-        print(self.request.user.get_full_name())
-        return AddFee.objects.filter(name=self.request.user.get_full_name())
+        print(self.request.user.roll_no)
+        return AddFee.objects.filter(roll_no=self.request.user.roll_no)

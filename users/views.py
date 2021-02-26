@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from infosec.views import CreateInfoSec
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 
 
