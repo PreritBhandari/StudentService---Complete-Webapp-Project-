@@ -6,7 +6,13 @@
 <div style="color: white;">
 
 
-<!--    {% if user.is_superuser %}-->
+    {% if user.is_superuser %}
+    <button style=" margin-top:150px;margin-left: 450px; " type="submit" class="btn btn-primary"><a
+            style="color: black;text-decoration: none"
+            href="{% url 'infosec' %}">See
+        Information</a></button>
+
+    {% else %}
 
 
     <style>
@@ -18,49 +24,17 @@
 
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        <div style="margin-left: 280px;text-align: center;background-color: teal;width: 600px;border-radius: 40px">
+        <div style="margin-left: 280px;padding:30px;text-align: center;background-color: teal;width: 600px;border-radius: 40px">
+            {{ form|crispy }}
 
 
-            <label style="margin-top: 20px">Name </label><br/>
-            {{ form.name}}
-            <br/><br/>
-
-
-            <label>Faculty</label><br/>
-            {{ form.faculty }}<br/><br/>
-
-            <label>Year</label><br/>
-            {{ form.year }}<br/><br/>
-
-
-            <label>Roll No</label><br/>
-            {{ form.roll_no }}<br/><br/>
-
-            <label>Fees Type</label><br/>
-            {{ form.fees_type }}<br/><br/>
-
-            <label>Fees Month</label><br/>
-            {{ form.fee_month}}<br/><br/>
-
-
-            <label>Amount</label><br/>
-            {{ form.amount}}<br/><br/>
-
-
-            <button style=" margin-bottom:20px; " type="submit" class="btn btn-primary">Add Fee</button>
+            <button style=" margin-bottom:20px; " type="submit" class="btn btn-primary">Add Information</button>
         </div>
     </form>
 
 
-    <!--    {% else %}-->
-    <!--    Request Your College Administration For Fee Addition.If you are the College Staff, you can add the Fee with our-->
-    <!--    Staff Login Page.Login with the Staff if you are Staff.-->
+    {% endif %}
 
-    <!--    <br/><br/>-->
-
-    <!--    Thanks For Visiting !!-->
-
-    <!--    {% endif %}-->
 </div>
 
 

@@ -1,0 +1,130 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/media/table.css">
+    <!--===============================================================================================-->
+</head>
+<body>
+
+{% if user.is_superuser %}
+
+<div class="limiter">
+
+    <br/><br/>
+    <div class="container-table100">
+        <div class="wrap-table100">
+            <div class="table100 ver1">
+                <div class="table100-firstcol">
+                    <table>
+                        <thead>
+                        <tr class="row100 head">
+                            <th style="color:black; font-weight: bold;text-align: center" class="cell100 column1">
+                                Students
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        {% for info in infos %}
+                        {% if info.user.username == 'root' %}
+                        <tr></tr>
+                        {% else %}
+                        <tr class="row100 body">
+
+                            <td style="color:black;" class="cell100 column1">{{ info.user.get_full_name }}</td>
+                        </tr>
+                        {% endif %}
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="wrap-table100-nextcols js-pscroll">
+                    <div class="table100-nextcols">
+                        <table>
+                            <thead>
+                            <tr class="row100 head">
+
+
+                                <th style="color:black; font-weight: bold" class="cell100 column2">Phone No</th>
+                                <th style="color:black; font-weight: bold;text-align: center" class="cell100 column3">
+                                    Father Name
+                                </th>
+
+                                <th style="color:black; font-weight: bold;text-align: center" class="cell100 column4">
+                                    Mother Name
+                                </th>
+                                <th style="color:black; font-weight: bold;text-align: center" class="cell100 column5">
+                                    Address
+                                </th>
+                                <th style="color:black; font-weight: bold;text-align: center" class="cell100 column6">
+                                    Guardian No
+                                </th>
+                                <th style="color:black; font-weight: bold;text-align: center" class="cell100 column7">
+                                    Github Link
+                                </th>
+                                <th style="color:black; font-weight: bold;text-align: center" class="cell100 column8">
+                                    Facebook Link
+                                </th>
+                              
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for info in infos %}
+                            {% if info.user.username != 'root' %}
+                            <tr class="row100 body">
+
+                                <td style="color:black;" class="cell100 column2">{{ info.phone_no }}</td>
+                                <td style="color:black;" class="cell100 column3" align="center">{{ info.father_name }}
+                                </td>
+                                <td style="color:black;" class="cell100 column4" align="center">{{ info.mother_name }}
+                                </td>
+                                <td style="color:black;" class="cell100 column5" align="center">{{ info.address }}</td>
+                                <td style="color:black;" class="cell100 column6" align="center">{{ info.guardian_no }}
+                                </td>
+
+
+                            </tr>
+                            {% endif %}
+                            {% endfor %}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% else %}
+
+<div style="color: white; margin-left: 380px;text-align: center;font-size: 20px;">
+    <a
+            class=" btn btn-outline-success"
+            href="{% url 'fee-trans' %}" style="text-decoration: none">
+
+        See Your Transactions
+
+    </a>
+    <br/>
+    <br/>
+    If you are the College Staff, you can see the Fee Transactions
+    with our
+    Staff Login Page. Login with the Staff if you are Staff.
+    <br/><br/>
+
+    Thanks For Visiting !!
+
+
+</div>
+
+{% endif %}
+</body>
+
+
+{% endblock content %}
+

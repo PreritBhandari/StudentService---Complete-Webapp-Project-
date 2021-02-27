@@ -5,54 +5,34 @@
     <link rel="stylesheet" type="text/css" href="/media/table.css">
     <!--===============================================================================================-->
 </head>
-{% if user.is_superuser %}
+
 
 <div style="margin-left: 400px;margin-top: 150px;">
+
+    {% if user.is_superuser %}
+    <div>
+        <button class="btn btn-outline-warning"><a style="text-decoration: none;color: red;"
+                                                   href="{% url 'infosec-list-user' %}">List
+            Information</a>
+        </button>
+
+        &nbsp;&nbsp;
+
+    </div>
+    {% else %}
     <button class="btn btn-outline-warning"><a style="text-decoration: none;color: red;"
                                                href="{% url 'infosec-list' %}">List
         Information</a>
     </button>
 
     &nbsp;&nbsp;
-
-
     <button class="btn btn-outline-warning"><a style="text-decoration: none;color: red;"
                                                href="{% url 'infosec-create' %}">Add
         Information</a>
     </button>
+    {% endif %}
+
 </div>
 
-{% else %}
 
-<div class="content-section">
-    <div class="media">
-        <img class=" account-img" src="{{ user.profile.image.url }}">
-
-    </div>
-    <!-- FORM HERE -->
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        <fieldset class="form-group">
-            <legend class="border-bottom mb-2">
-                Information Section
-            </legend>
-            <h2>{{ user.username }}</h2>
-            <div class="media-body">
-
-                <p class="text-secondary">{{ user.email }}</p>
-            </div>
-            <!--            <img width="20px" height="20px" class="rounded-circle account-img" src="{{ form.resume.url }}">-->
-
-            {{ form|crispy }}
-
-        </fieldset>
-        <div class="form-group">
-            <button class="btn btn-outline-info" type="submit">
-                Update
-            </button>
-
-        </div>
-    </form>
-</div>
-{% endif %}
 {% endblock content %}

@@ -1,4 +1,6 @@
 {% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+
 {% block content %}
 
 
@@ -9,115 +11,51 @@
 <body>
 
 {% if user.is_superuser %}
-
 <div class="limiter">
 
-    {% if info.user == root %}
-    <strong style="margin-left: 400px;color: white">No Informations To Show</strong>
+
+    <!--    {% if info.user == root %}-->
+    <!--    <strong style="margin-left: 400px;color: white">No Informations To Show</strong>-->
+    <!--    {% endif %}-->
+
+
     {% else %}
 
-    <div class="container-table100">
-        <div class="wrap-table100">
-            <div class="table100 ver1">
-                <div class="table100-firstcol">
-                    <table>
-                        <thead>
-                        <tr class="row100 head">
-                            <th style="color:black; font-weight: bold;text-align: center" class="cell100 column1">
-                                Students
-                            </th>
-                        </tr>
-                        </thead>
-                        <tbody>
 
-                        {% for info in infos %}
-                        <tr class="row100 body">
+    <div class="content-section">
+        <div class="media">
+            <img class=" account-img" src="{{ user.profile.image.url }}">
 
-                            <td style="color:black;" class="cell100 column1">{{ info.user.get_full_name }}</td>
-                        </tr>
-                        {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="wrap-table100-nextcols js-pscroll">
-                    <div class="table100-nextcols">
-                        <table>
-                            <thead>
-
-                            ['resume', 'phone_no', 'father_name', 'mother_name', 'address', 'guardian_no', 'website',
-                            'github_link',
-                            'facebook_link', 'linkedin_link']
-                            <tr class="row100 head">
-                                <th style="color:black; font-weight: bold" class="cell100 column2">Phone No</th>
-                                <th style="color:black; font-weight: bold;text-align: center" class="cell100 column3">
-                                    Father Name
-                                </th>
-
-                                <th style="color:black; font-weight: bold;text-align: center" class="cell100 column4">
-                                    Mother Name
-                                </th>
-                                <th style="color:black; font-weight: bold;text-align: center" class="cell100 column5">
-                                    Address
-                                </th>
-                                <th style="color:black; font-weight: bold;text-align: center" class="cell100 column6">
-                                    Guardian No
-                                </th>
-                                <th style="color:black; font-weight: bold;text-align: center" class="cell100 column7">
-
-                                </th>
-                                <th style="color:black; font-weight: bold;text-align: center" class="cell100 column8">
-                                    Amount
-                                </th>
-                                <th style="color:black; font-weight: bold;text-align: center" class="cell100 column8">
-                                    Update Transaction
-                                </th>
-
-                            </tr>
-                            </thead>
-                            <tbody>
-                            {% for fee in fees %}
-                            <tr class="row100 body">
-
-                                <td style="color:black;" class="cell100 column2">{{ fee.faculty }}</td>
-                                <td style="color:black;" class="cell100 column3" align="center">{{ fee.roll_no }}</td>
-                                <td style="color:black;" class="cell100 column4" align="center">{{ fee.year }}</td>
-                                <td style="color:black;" class="cell100 column5" align="center">{{ fee.fees_type }}</td>
-                                <td style="color:black;" class="cell100 column6" align="center">{{ fee.fee_month }}</td>
-                                <td style="color:black;" class="cell100 column7" align="center">{{ fee.fee_paid_date}}
-                                </td>
-                                <td style="color:red;" class="cell100 column8" align="center">{{ fee.amount }}</td>
-                                <td style="color:red;" class="cell100 column8" align="center"><a
-                                        class=" btn-outline-success"
-                                        href="{% url 'fee-update' fee.id %}" style="text-decoration: none">
-
-                                    Update
-
-                                </a></td>
-
-
-                            </tr>
-                            {% endfor %}
-
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
         </div>
+        <!-- FORM HERE -->
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-2">
+                    Information Section
+                </legend>
+                <h2>{{ user.username }}</h2>
+                <div class="media-body">
 
+                    <p class="text-secondary">{{ user.email }}</p>
+                </div>
+                <!--            <img width="20px" height="20px" class="rounded-circle account-img" src="{{ form.resume.url }}">-->
+
+                {{ form|crispy }}
+
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">
+                    Update
+                </button>
+
+            </div>
+        </form>
     </div>
-    {% endif %}
+
+
 </div>
 
-{% else %}
-
-<div style="margin-left: 450px;margin-top: 150px;">
-    <button class="btn btn-outline-warning"><a style="text-decoration: none;color: red;" href="{% url 'infosec' %}">See
-        Your
-        Information</a>
-    </button>
-</div>
 
 {% endif %}
 </body>

@@ -8,6 +8,7 @@ from users.models import CustomUser
 
 class Information(models.Model):
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
+    roll_no = models.CharField(max_length=9, default='BCT074047')
     resume = models.FileField(upload_to='infosec', default='infosec/Prerits_Resume.pdf', blank=True)
     # website = models.CharField(max_length=200, default='www.studentservice.com', blank=True)
     github_link = models.CharField(max_length=200, default='github.com', blank=True)
@@ -20,7 +21,7 @@ class Information(models.Model):
     address = models.CharField(max_length=250, default='Bharatpur')
 
     def __str__(self):
-        return f'{self.user.username} Information'
+        return f'{self.roll_no} Information'
 
     def save(self, *args, **kwargs):
         if self.pk:
