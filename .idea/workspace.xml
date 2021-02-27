@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a917ce8-617c-4ae1-8884-ef6862a66ede" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/infosec/migrations/0002_auto_20210227_1719.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infosec/migrations/0003_remove_information_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infosec/migrations/0004_information_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infosec/migrations/0005_auto_20210227_1724.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infosec/migrations/0006_auto_20210227_1727.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infosec/templates/infosec/infosec-list-user.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/infosec/ankit_bro.JPG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infosec/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/infosec/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infosec/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/infosec/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infosec/templates/infosec/infoadd.html" beforeDir="false" afterPath="$PROJECT_DIR$/infosec/templates/infosec/infoadd.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infosec/templates/infosec/infosec-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/infosec/templates/infosec/infosec-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infosec/templates/infosec/infosec.html" beforeDir="false" afterPath="$PROJECT_DIR$/infosec/templates/infosec/infosec.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infosec/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/infosec/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infosec/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/infosec/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infosec/templates/infosec/infosec-list-user.html" beforeDir="false" afterPath="$PROJECT_DIR$/infosec/templates/infosec/infosec-list-user.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +107,7 @@
       <workItem from="1614059657714" duration="748000" />
       <workItem from="1614145171888" duration="1409000" />
       <workItem from="1614329137459" duration="9659000" />
-      <workItem from="1614411851134" duration="18612000" />
+      <workItem from="1614411851134" duration="19003000" />
     </task>
     <servers />
   </component>
