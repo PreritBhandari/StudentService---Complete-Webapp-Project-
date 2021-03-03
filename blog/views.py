@@ -72,7 +72,7 @@ class UploadBook(LoginRequiredMixin, CreateView):
     model = Book
     template_name = 'blog/upload_book.html'
     # context_object_name = 'book'
-    fields = ['title', 'details', 'author', 'file', 'year', 'faculty']
+    fields = ['title', 'details', 'thumbnail', 'author', 'file', 'year', 'faculty']
 
     def form_valid(self, form):
         form.instance.user = self.request.user
@@ -81,7 +81,7 @@ class UploadBook(LoginRequiredMixin, CreateView):
 
 class BookUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Book
-    fields = ['title', 'details', 'author', 'file', 'year', 'faculty']
+    fields = ['title', 'details', 'thumbnail', 'author', 'file', 'year', 'faculty']
     template_name = 'blog/upload_book.html'
 
     # author set garna lai yo talako

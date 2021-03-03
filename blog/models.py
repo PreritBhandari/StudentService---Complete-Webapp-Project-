@@ -114,6 +114,7 @@ class Book(models.Model):
     ]
 
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    thumbnail = models.ImageField(default='media/thumbnails/bookdefault.jpg', upload_to='media/thumbnails/', blank=True)
     title = models.CharField(max_length=20)
     author = models.CharField(max_length=30)
     date = models.DateTimeField(default=timezone.now)

@@ -30,5 +30,5 @@ class Information(models.Model):
                 this_record.resume.delete(save=False)
         super(Information, self).save(*args, **kwargs)
 
-    def get_absolute_url(self):
-        return reverse('infosec')
+    # def get_absolute_url(self):
+    #     return reverse('infosec')

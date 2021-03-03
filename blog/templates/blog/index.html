@@ -37,6 +37,22 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
+    <style>
+        .nextdrop, .nextdrop2 {
+            position: relative;
+            top: 0;
+            left: 72%;
+
+        }
+
+
+        /*.infosec:hover .nextdrop {*/
+        /*    display: block;*/
+        /*}*/
+
+
+    </style>
 </head>
 <body>
 <!-- Page Preloder -->
@@ -91,9 +107,59 @@
         {% if user.is_authenticated %}
         <li><a href="#">Sections </a>
             <ul class="sub-menu">
-                <li><a class="dropdown-item" href="{% url 'infosec' %}">Information Section</a></li>
-                <li><a class="dropdown-item" href="{% url 'account-list' %}">Account Section</a></li>
+                <li class="infosec">
+                    <a class="dropdown-item">Information Section &nbsp;<span
+                            class="fa fa-caret-right"></span></a>
+
+                    <div class="nextdrop">
+                        <ul class="sub-menu">
+                            {% if user.is_superuser %}
+                            <li class="dropdown-item"><a class="dropdown-item" href="{% url 'infosec-list-user' %}">List
+                                Information</a></li>
+
+                            {% else %}
+                            <li class="dropdown-item"><a class="dropdown-item" href="{% url 'infosec-list' %}">List
+                                Information</a></li>
+                            <li class="dropdown-item"><a class="dropdown-item" href="{% url 'infosec-create' %}">Add
+                                Information</a></li>
+                            {% endif %}
+
+                        </ul>
+
+                    </div>
+
+
+                </li>
+                <li class="accountsec"><a class="dropdown-item">Account
+                    Section&nbsp;<span
+                            class="fa fa-caret-right"></span></a>
+
+
+                    <div class="nextdrop2">
+                        <ul class="sub-menu">
+                            {% if user.is_superuser %}
+
+                            <li class="dropdown-item"><a class="dropdown-item" href="{% url 'AddFee' %}">Add
+                                Fees</a></li>
+                            <li class="dropdown-item"><a class="dropdown-item" href="{% url 'account-list' %}">List
+                                Transactions</a></li>
+
+                            {% else %}
+
+                            <li class="dropdown-item"><a class="dropdown-item" href="{% url 'fee-trans' %}">List
+                                Transactions</a></li>
+
+                            {% endif %}
+
+
+                        </ul>
+
+                    </div>
+
+                </li>
                 <li><a class="dropdown-item" href="{% url 'book_list' %}">Document Section</a></li>
+
+
             </ul>
         </li>
 
@@ -392,6 +458,31 @@
 <!-- Footer section end -->
 
 <!--====== Javascripts & Jquery ======-->
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        $(".infosec").hover(function () {
+                $(this).find(".nextdrop").fadeIn();
+            }
+            , function () {
+                $(this).find(".nextdrop").fadeOut();
+            }
+        );
+
+        $(".accountsec").hover(function () {
+                $(this).find(".nextdrop2").fadeIn();
+            }
+            , function () {
+                $(this).find(".nextdrop2").fadeOut();
+            }
+        );
+
+
+    });
+</script>
+
+
 <script src="/media/js/jquery-3.2.1.min.js"></script>
 <script src="/media/js/bootstrap.min.js"></script>
 <script src="/media/js/jquery.slicknav.min.js"></script>

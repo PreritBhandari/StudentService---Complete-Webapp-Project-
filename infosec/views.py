@@ -1,6 +1,8 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.db import IntegrityError
+from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
 from .forms import InformationForm
@@ -35,6 +37,7 @@ def information(request):
     return render(request, 'infosec/infosec-list.html', context)
 
 
+@login_required
 def informationhome(request):
     return render(request, 'infosec/infosec.html')
 
@@ -47,7 +50,12 @@ class CreateInfoSec(CreateView, UserPassesTestMixin, LoginRequiredMixin):
 
     def form_valid(self, form):
         form.instance.user = self.request.user
-        return super().form_valid(form)
+        try:
+            return super().form_valid(form)
+        except IntegrityError:
+            messages.warning(self.request,
+                             f'Information Creation Error For {self.request.user.roll_no}.Your Information is already created or you provided the wrong Roll No below!! ')
+            return redirect('infosec-create')
 
     def test_func(self):
         info = self.get_object()
