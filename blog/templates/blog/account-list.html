@@ -5,15 +5,39 @@
 <head>
     <link rel="stylesheet" type="text/css" href="/media/table.css">
     <!--===============================================================================================-->
+
+    <style>
+        .hostel {
+            background-color: lightgreen;
+        }
+
+        .nothostel {
+            background-color: lightblue;
+        }
+
+    </style>
 </head>
 <body>
 
 {% if user.is_superuser %}
 
 <div class="limiter">
+    <div style="margin-left: 500px;">
+        <div style="color: white;font-weight: bold">
+            <div style="width: 15px;height: 15px;background-color: lightgreen"></div> &nbsp;
+            Hostel Fees
+        </div>
+        <div style="color: white;font-weight: bold;margin-top: 20px;">
+            <div style="width: 15px;height: 15px;background-color: lightblue"></div> &nbsp;
+            College Fees
+        </div>
+    </div>
+
+
     <button class="btn btn-outline-warning"><a style="text-decoration: none;color: red;" href="{% url 'AddFee' %}">Add
         Fee</a>
     </button>
+
     <br/><br/>
     <div class="container-table100">
         <div class="wrap-table100">
@@ -30,7 +54,7 @@
                         <tbody>
 
                         {% for fee in fees %}
-                        <tr class="row100 body">
+                        <tr class="row100 body {% if fee.is_hostel == True %} hostel {% else %} nothostel {% endif %}">
 
                             <td style="color:black;" class="cell100 column1">{{ fee.name }}</td>
                         </tr>
@@ -52,6 +76,9 @@
 
                                 <th style="color:black; font-weight: bold;text-align: center" class="cell100 column4">
                                     Year
+                                </th>
+                                <th style="color:black; font-weight: bold;text-align: center" class="cell100 column5">
+                                    Hostel Fees
                                 </th>
                                 <th style="color:black; font-weight: bold;text-align: center" class="cell100 column5">
                                     Fees
@@ -76,11 +103,18 @@
                             </thead>
                             <tbody>
                             {% for fee in fees %}
-                            <tr class="row100 body">
+                            <tr class="row100 body {% if fee.is_hostel == True %} hostel {% else %} nothostel {% endif %}">
 
                                 <td style="color:black;" class="cell100 column2">{{ fee.faculty }}</td>
                                 <td style="color:black;" class="cell100 column3" align="center">{{ fee.roll_no }}</td>
                                 <td style="color:black;" class="cell100 column4" align="center">{{ fee.year }}</td>
+                                <td style="color:black;" class="cell100 column4" align="center">
+                                    {% if fee.is_hostel == True %}
+                                    <strong style="color: red;font-weight: bold;">Yes</strong>
+                                    {% else %}
+                                    <strong style="color: red;font-weight: bold;">No</strong>
+                                    {% endif %}
+                                </td>
                                 <td style="color:black;" class="cell100 column5" align="center">{{ fee.fees_type }}</td>
                                 <td style="color:black;" class="cell100 column6" align="center">{{ fee.fee_month }}</td>
                                 <td style="color:black;" class="cell100 column7" align="center">{{ fee.fee_paid_date}}

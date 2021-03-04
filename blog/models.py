@@ -205,8 +205,8 @@ class AddFee(models.Model):
     faculty = models.CharField(max_length=10, choices=faculties, default='BCT')
     year = models.CharField(max_length=10, choices=years
                             , default='1st')
-    roll_no = models.CharField(max_length=9, default='BCT074047')
-
+    roll_no = models.CharField(max_length=9, default='BCT074000')
+    is_hostel = models.BooleanField()
     fees_type = models.CharField(max_length=10, choices=type)
     fee_month = models.CharField(max_length=1000, choices=month, blank=True)
     fee_paid_date = models.DateTimeField(default=timezone.now)

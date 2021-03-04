@@ -172,51 +172,11 @@ def account(request):
     return render(request, 'blog/account.html')
 
 
-# class FeeListView(ListView):
-#     model = Fee
-#     template_name = 'blog/account-list.html'
-#     context_object_name = 'fees'
-#     ordering = ['fullname']
-
-#
-# class FullfeeListView(ListView):
-#     model = Fullfee
-#     template_name = 'blog/add-fee.html'
-#     context_object_name = 'fullfees'
-#     ordering = ['fullname']
-
-
-class FullfeeCreateView(LoginRequiredMixin, CreateView):
-    model = Fullfee
-    fields = ['details', 'fees_type', 'fee_paid_date', 'fee_month', 'amount_fee']
-
-    # author set garna lai yo talako
-    def form_valid(self, form):
-        form.instance.details.fullname = self.request.user
-        return super().form_valid(form)
-
-
-class FullfeeUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-    model = Fullfee
-    fields = ['details']
-
-    # author set garna lai yo talako
-    def form_valid(self, form):
-        form.instance.details.fullname = self.request.user
-        return super().form_valid(form)
-
-    def test_func(self):
-        fullfee = self.get_object()
-        if self.request.user == fullfee.details.fullname:
-            return True
-        return False
-
-
 # Add Fee Section For Staffs
 
 class AddFeeCreateView(LoginRequiredMixin, CreateView):
     model = AddFee
-    fields = ['name', 'roll_no', 'faculty', 'year', 'fees_type', 'fee_month', 'amount']
+    fields = ['name', 'roll_no', 'is_hostel', 'faculty', 'year', 'fees_type', 'fee_month', 'amount']
     template_name = 'blog/AddFee.html'
 
     def form_valid(self, form):
@@ -234,7 +194,7 @@ class AddFeeListView(LoginRequiredMixin, ListView):
 
 class AddFeeUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = AddFee
-    fields = ['name', 'roll_no', 'faculty', 'year', 'fees_type', 'fee_month', 'amount']
+    fields = ['name', 'roll_no', 'is_hostel', 'faculty', 'year', 'fees_type', 'fee_month', 'amount']
     template_name = 'blog/AddFee.html'
 
     # author set garna lai yo talako
@@ -255,8 +215,7 @@ class ViewFeeTrans(LoginRequiredMixin, ListView):
     model = AddFee
     template_name = 'blog/yourtrans.html'
     context_object_name = 'fees'
-    ordering = ['-fee_paid_date']
 
     def get_queryset(self):
         print(self.request.user.roll_no)
-        return AddFee.objects.filter(roll_no=self.request.user.roll_no)
+        return AddFee.objects.filter(roll_no=self.request.user.roll_no).order_by('-fee_paid_date')
