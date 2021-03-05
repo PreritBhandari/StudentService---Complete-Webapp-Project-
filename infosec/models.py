@@ -8,7 +8,7 @@ from users.models import CustomUser
 
 class Information(models.Model):
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
-    roll_no = models.CharField(max_length=9, default='BCT074047')
+    roll_no = models.CharField(max_length=9, default='BCT074000')
     resume = models.FileField(upload_to='infosec', default='infosec/Prerits_Resume.pdf', blank=True)
     # website = models.CharField(max_length=200, default='www.studentservice.com', blank=True)
     github_link = models.CharField(max_length=200, default='github.com', blank=True)
@@ -30,5 +30,5 @@ class Information(models.Model):
                 this_record.resume.delete(save=False)
         super(Information, self).save(*args, **kwargs)
 
-    # def get_absolute_url(self):
-    #     return reverse('infosec')
+    def get_absolute_url(self):
+        return reverse('infosec-list')

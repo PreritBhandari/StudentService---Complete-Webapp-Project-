@@ -30,6 +30,7 @@ urlpatterns = [
     # path('books/', blog_views.book_list, name='book_list'),
     # path('books/upload', blog_views.upload_book, name='upload_book'),
     path('books/', blog_views.BookList.as_view(), name='book_list'),
+    path('bookspt/', blog_views.BookListPrivate.as_view(), name='private_docs'),
     path('books/upload', blog_views.UploadBook.as_view(), name='upload_book'),
     path('books/<int:pk>/update/', blog_views.BookUpdateView.as_view(), name='book-update'),
     path('books/<int:pk>/delete/', blog_views.BookDeleteView.as_view(), name='book-delete'),

@@ -45,16 +45,17 @@ def informationhome(request):
 class CreateInfoSec(CreateView, UserPassesTestMixin, LoginRequiredMixin):
     model = Information
     template_name = 'infosec/infoadd.html'
-    fields = ['resume', 'roll_no', 'github_link', 'facebook_link', 'phone_no', 'father_name', 'mother_name',
+    fields = ['resume', 'github_link', 'facebook_link', 'phone_no', 'father_name', 'mother_name',
               'guardian_no', 'address']
 
     def form_valid(self, form):
         form.instance.user = self.request.user
+        form.instance.roll_no = self.request.user.roll_no
         try:
             return super().form_valid(form)
         except IntegrityError:
             messages.warning(self.request,
-                             f'Information Creation Error For {self.request.user.roll_no}.Your Information is already created or you provided the wrong Roll No below!! ')
+                             f'Information Creation Error For {self.request.user.roll_no}.Your Information already exists !! ')
             return redirect('infosec-create')
 
     def test_func(self):

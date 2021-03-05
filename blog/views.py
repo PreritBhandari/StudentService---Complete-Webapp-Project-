@@ -50,11 +50,24 @@ def document(request):
 #     return render(request, 'blog/book_list.html', {'books': books})
 
 
-class BookList(ListView):
+class BookList(ListView,LoginRequiredMixin):
     model = Book
     template_name = 'blog/book_list.html'
     context_object_name = 'books'
-    ordering = ['-date']
+   
+
+    def get_queryset(self):
+        return Book.objects.filter(is_private=False).order_by('-date')
+
+class BookListPrivate(ListView,LoginRequiredMixin,UserPassesTestMixin):
+    model = Book
+    template_name = 'blog/book_list_private.html'
+    context_object_name = 'books'
+    
+
+    def get_queryset(self):
+        return Book.objects.filter(user=self.request.user).order_by('-date')
+
 
 
 # def upload_book(request):
@@ -72,7 +85,7 @@ class UploadBook(LoginRequiredMixin, CreateView):
     model = Book
     template_name = 'blog/upload_book.html'
     # context_object_name = 'book'
-    fields = ['title', 'details', 'thumbnail', 'author', 'file', 'year', 'faculty']
+    fields = ['title', 'details', 'thumbnail', 'author', 'file', 'year', 'faculty','is_private']
 
     def form_valid(self, form):
         form.instance.user = self.request.user
@@ -81,7 +94,7 @@ class UploadBook(LoginRequiredMixin, CreateView):
 
 class BookUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Book
-    fields = ['title', 'details', 'thumbnail', 'author', 'file', 'year', 'faculty']
+    fields = ['title', 'details', 'thumbnail', 'author', 'file', 'year', 'faculty','is_private']
     template_name = 'blog/upload_book.html'
 
     # author set garna lai yo talako

@@ -119,6 +119,7 @@ class Book(models.Model):
     author = models.CharField(max_length=30)
     date = models.DateTimeField(default=timezone.now)
     file = models.FileField(upload_to='media/files/')
+    is_private = models.BooleanField(default=False)
     details = models.CharField(max_length=30, default='No Details')
     faculty = models.CharField(max_length=10, choices=faculties, default='BCT')
     year = models.CharField(max_length=3, choices=years, default='3rd')
