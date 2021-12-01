@@ -3,9 +3,3 @@ This is the webapp built by us which controls the management of the students and
 
 
 
-
-whats completed in this:
-
-
-account section ko just data receive garera matra bhyayeko xa
-front end haru kei garya xaina.
